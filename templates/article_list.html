@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content%}
+{%for art in object_list%}
+    <div class="card">
+  <img src="{{art.photo}}" class="card-img-top" alt="{{art.title}}">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{% url 'detail' art.pk %}">{{art.title}}</a></h5>
+    <p class="card-text">{{art.summery}}...<a href="{% url 'detail' art.pk %}">batafsil</a></p>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock content %}

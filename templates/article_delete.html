@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Postni o'chirishni istaysizmi</h1>
+    <form method="post">{% csrf_token %}
+        <p> {{art.title}} nomli postni o'chirishni istaysizmi </p>
+        <button type="submit" class="btn btn-danger" > Ha </button>
+    </form>
+
+{% endblock content %}

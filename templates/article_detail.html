@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card" style="width: 24rem;">
+  <img src="{{ art.photo.url}}" class="card-img-top" alt="{{ art.title }}">
+  <div class="card-body">
+    <h4 class="card-title">{{art.title}}</h4>
+    <p class="card-text">{{art.body}}</p>
+    <h6 class="card-subtitle mb-2 text-muted"> Muallif: {{art.author}} | {{art.date}}</h6>
+      <a href="{% url 'article_list'%}" class="btn btn-primary">Barcha postlar</a>|
+      <a href="{% url 'edit' art.pk %}" class="btn btn-success">Tahrirlash</a>|
+      <a href="{% url 'delete' art.pk %}" class="btn btn-danger">O'chirish</a>
+  </div>
+</div>
+{% endblock content %}
+
